@@ -46,18 +46,75 @@ header{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 2px solid white;
 
 }
 
 .movie{
   width: 300px;
-  border: 2px solid red;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
 
 }
 
 .movie img{
   width: 100%;
-  border: 2px solid green;
 
+}
+
+.movie-info{
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+  margin-top: 0;
+}
+
+.movie-info span{
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  border: 1px solid red;
+  font-weight: bold;
+}
+
+/* rating green when span green, same for others */
+.movie-info span.green{
+  color: lightgreen
+}
+.movie-info span.orange{
+  color: orange
+}
+.movie-info span.red{
+  color: red
+}
+
+.overview{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* padding: 1rem; */
+  max-height: 100%;
+
+  /* even if overview takes 100% height if we push it 101 down it is below visual area */
+  transform: translateY(101%);
+
+  /* transition to the transform property */
+  transition: transform 0.3s ease-in;
+}
+
+/* when hover over card show overview class */
+.movie:hover .overview{
+  /* transform property pointing at transition  */
+  transform: translateY(0); 
 }
