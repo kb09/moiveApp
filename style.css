@@ -38,3 +38,26 @@ header{
   background-color: var(--primary-color);
   
 }
+.search::placeholder{
+  color: #7378c5;
+}
+
+#main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid white;
+
+}
+
+.movie{
+  width: 300px;
+  border: 2px solid red;
+
+}
+
+.movie img{
+  width: 100%;
+  border: 2px solid green;
+
+}
